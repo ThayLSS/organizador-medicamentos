@@ -1,0 +1,20 @@
+name: Python CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install pytest pylint
+      - name: Run Pytest
+        run: python -m pytest
+      - name: Run Pylint
+        run: python -m pylint src/main.py

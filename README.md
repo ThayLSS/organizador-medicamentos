@@ -1,32 +1,51 @@
 ##Organizador de Medicamentos 💊
-Sistema de gerenciamento para controle de horários de medicamentos, focado em simplicidade, persistência de dados e boas práticas de engenharia.
 
-##Funcionalidades
-Cadastro: Adição de novos medicamentos.
+##Descrição do Problema:
+Idosos e pessoas com rotinas complexas frequentemente esquecem o horário correto de tomar seus medicamentos, o que pode causar sérios riscos à saúde. A falta de uma ferramenta simples para gerenciar esses horários agrava esse problema.
 
-##Listagem: Visualização de todos os itens cadastrados.
+##Proposta da Solução:
+O Organizador de Medicamentos é uma aplicação CLI que permite o cadastro, acompanhamento e busca de remédios, garantindo que o usuário tenha um controle claro de sua rotina de forma simples e acessível.
 
-##Remoção: Exclusão segura de medicamentos por índice.
+##Público-alvo:
+Idosos, cuidadores e qualquer pessoa que precise de auxílio para gerenciar sua rotina de medicamentos.
 
-##Persistência: Dados salvos automaticamente em formato JSON.
+##Funcionalidades Principais
+1.Adicionar Medicamento: Cadastro de nome, horário e frequência.
 
-##Como Executar
-Pré-requisitos
-Python 3.11+
-Git
+2.Listar Todos: Visualização rápida de todos os medicamentos cadastrados.
 
-##Instalação
-Clone o repositório: git clone https://github.com/seu-usuario/organizador-medicamentos.git
-cd organizador-medicamentos
+3.Excluir Medicamento: Remoção de registros por índice.
+
+4.Buscar Medicamento: Busca rápida por nome para ver o horário de uma medicação específica.
+
+##Tecnologias Utilizadas:
+Linguagem: Python 3.11
+
+##Ferramentas de Qualidade: Flake8 (Linting) e Pytest (Testes)
+
+##Integração: GitHub Actions (CI)
+
+##Como Instalar e Executar:
+Clone o repositório: git clone https://github.com/ThayLSS/organizador-medicamentos
 
 ##Instale as dependências: pip install -r requirements.txt
 
-##Testes
-Para garantir a qualidade do sistema, utilizamos o pytest. Rode os testes com: python -m pytest
+##Execute a aplicação:
+python -m src.main
 
-##Estrutura do Projeto
-src/: Lógica principal e gerenciamento dos dados.
+##Como Rodar os Testes:
+Para garantir que tudo está funcionando como esperado, execute:
+pytest teste/
 
-teste/: Testes automatizados que garantem a integridade do sistema.
+##Como Rodar o Lint:
+Para verificar a qualidade do código conforme as normas PEP 8:
+python -m flake8 src/
 
-dados.json: Banco de dados local em formato JSON.
+##Versão Atual
+1.0.0
+
+##Autora:
+Thaynara Lima Soares Sousa
+
+##Link do Repositório
+https://github.com/ThayLSS/organizador-medicamentos

@@ -53,10 +53,10 @@ def main():
                     print(f"[{i}] - {nome} ({hora})")
                 try:
                     idx = int(input("\nDigite o número para excluir: "))
-                    removido = sistema.excluir(idx)
-                    if removido:
-                        print(f"Sucesso: '{removido.get('nome', 'Medicamento')}' "
-      "removido.")
+                    rem = sistema.excluir(idx)
+                    if rem:
+                        n = rem.get("nome", "Medicamento")
+                        print(f"Sucesso: '{n}' removido.")
                     else:
                         print("Erro: Número não encontrado.")
                 except ValueError:
@@ -68,8 +68,9 @@ def main():
             resultados = sistema.buscar(termo)
             if resultados:
                 for m in resultados:
-                   print(f"Encontrado: {m.get('nome', 'Sem nome')} "
-      f"às {m.get('horario', '00:00')}")
+                    nome = m.get("nome", "Sem nome")
+                    hora = m.get("horario", "00:00")
+                    print(f"Encontrado: {nome} às {hora}")
             else:
                 print("Nenhum medicamento encontrado.")
             input("\nPressione Enter para voltar ao menu")

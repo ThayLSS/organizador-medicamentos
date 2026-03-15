@@ -68,10 +68,8 @@ def main():
             resultados = sistema.buscar(termo)
             if resultados:
                 for m in resultados:
-                    texto = (
-                        f"Encontrado: {m.get('nome', 'Sem nome')} "
-                        f"às {m.get('horario', '00:00')}"
-                    )
+                    texto = f"Encontrado: {m.get('nome', 'Sem nome')} " \
+                            f"às {m.get('horario', '00:00')}"
                     print(texto)
             else:
                 print("Nenhum medicamento encontrado.")

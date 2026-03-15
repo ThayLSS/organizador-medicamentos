@@ -23,4 +23,6 @@ jobs:
         run: flake8 src/
         
       - name: Test com Pytest
-        run: pytest teste/
+        run: |
+          export PYTHONPATH=$PYTHONPATH:.
+          pytest teste/

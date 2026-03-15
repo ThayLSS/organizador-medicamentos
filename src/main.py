@@ -68,9 +68,11 @@ def main():
             resultados = sistema.buscar(termo)
             if resultados:
                 for m in resultados:
-                    nome = m.get("nome", "Sem nome")
-                    hora = m.get("horario", "00:00")
-                    print(f"Encontrado: {nome} às {hora}")
+                    texto = (
+                        f"Encontrado: {m.get('nome', 'Sem nome')} "
+                        f"às {m.get('horario', '00:00')}"
+                    )
+                    print(texto)
             else:
                 print("Nenhum medicamento encontrado.")
             input("\nPressione Enter para voltar ao menu")

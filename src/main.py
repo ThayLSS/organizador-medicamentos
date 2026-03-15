@@ -4,7 +4,7 @@ from .gerenciador import Gerenciador
 
 
 def limpar_tela():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 def main():
@@ -17,8 +17,9 @@ def main():
         print("2. Listar Todos")
         print("3. Excluir Medicamento")
         print("4. Sair")
+        print("5. Buscar Medicamento")
 
-        opcao = input("Escolha uma opção: ")
+        opcao = input("\nEscolha uma opção: ")
 
         if opcao == "1":
             nome = input("Nome do remédio: ")
@@ -35,29 +36,44 @@ def main():
                 print("Nenhum medicamento cadastrado.")
             else:
                 for i, m in enumerate(sistema.lista):
-                    print(f"{i}. {m['nome']} ({m['horario']}) - "
-                          f"{m['frequencia']}")
+                    nome = m.get("nome", "Sem nome")
+                    hora = m.get("horario", "00:00")
+                    freq = m.get("frequencia", "Não definida")
+                    print(f"{i}. {nome} ({hora}) - {freq}")
             input("\nPressione Enter para voltar ao menu")
 
         elif opcao == "3":
             if not sistema.lista:
                 print("\nSua lista está vazia!")
-                input("\nPressione Enter para voltar ao menu")
-                continue
+            else:
+                print("\n--- REMOVER MEDICAMENTO ---")
+                for i, m in enumerate(sistema.lista):
+                    nome = m.get("nome", "Sem nome")
+                    hora = m.get("horario", "00:00")
+                    print(f"[{i}] - {nome} ({hora})")
+                try:
+                    idx = int(input("\nDigite o número para excluir: "))
+                    removido = sistema.excluir(idx)
+                    if removido:
+                        print(
+                            f"Sucesso: '{removido.get('nome', 'Medicamento')}' removido."
+                        )
+                    else:
+                        print("Erro: Número não encontrado.")
+                except ValueError:
+                    print("Erro: Digite um número inteiro.")
+            input("\nPressione Enter para voltar ao menu")
 
-            print("\n--- REMOVER MEDICAMENTO ---")
-            for i, m in enumerate(sistema.lista):
-                print(f"[{i}] - {m['nome']} ({m['horario']})")
-
-            try:
-                idx = int(input("\nDigite o número do remédio para excluir: "))
-                removido = sistema.excluir(idx)
-                if removido:
-                    print(f"Sucesso: '{removido['nome']}' removido.")
-                else:
-                    print("Erro: Número não encontrado.")
-            except ValueError:
-                print("Erro: Você deve digitar um número inteiro.")
+        elif opcao == "5":
+            termo = input("Digite o nome do remédio para buscar: ")
+            resultados = sistema.buscar(termo)
+            if resultados:
+                for m in resultados:
+                    print(
+                        f"Encontrado: {m.get('nome', 'Sem nome')} às {m.get('horario', '00:00')}"
+                    )
+            else:
+                print("Nenhum medicamento encontrado.")
             input("\nPressione Enter para voltar ao menu")
 
         elif opcao == "4":
@@ -65,6 +81,7 @@ def main():
             break
         else:
             print("Opção inválida, tente novamente.")
+            input("Pressione Enter para continuar")
 
 
 if __name__ == "__main__":

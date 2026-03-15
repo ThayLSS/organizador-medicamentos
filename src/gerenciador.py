@@ -24,6 +24,9 @@ class Gerenciador:
     def excluir(self, indice):
         if 0 <= indice < len(self.lista):
             removido = self.lista.pop(indice)
-            self.salvar()  # Importante salvar após remover
+            self.salvar()
             return removido
         return None
+
+    def buscar(self, nome_busca):
+        return [m for m in self.lista if nome_busca.lower() in m["nome"].lower()]

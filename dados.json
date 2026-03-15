@@ -1,11 +1,12 @@
 [
     {
-        "nome": "anticoncepcional",
-        "horario": "19:00",
-        "frequencia": "24h"
+        "nome": "dipirona",
+        "horario": "06:00",
+        "frequencia": "6h"
     },
     {
-        "nome": "Dipirona",
-        "horario": "08:00"
+        "nome": "nimesulida",
+        "horario": "13:30",
+        "frequencia": "12h"
     }
 ]

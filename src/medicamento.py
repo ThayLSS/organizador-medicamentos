@@ -9,9 +9,10 @@ class Medicamento:
         return {
             "nome": self.nome,
             "horario": self.horario,
-            "frequencia": self.frequencia
+            "frequencia": self.frequencia,
         }
 
     def __str__(self):
-        return (f"{self.nome} | Horário: {self.horario} | "
-                f"Frequência: {self.frequencia}")
+        return (
+            f"{self.nome} | Horário: {self.horario} | " f"Frequência: {self.frequencia}"
+        )

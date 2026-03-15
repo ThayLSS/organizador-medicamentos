@@ -1,7 +1,11 @@
 [
     {
+        "nome": "anticoncepcional",
+        "horario": "19:00",
+        "frequencia": "24h"
+    },
+    {
         "nome": "Dipirona",
-        "horario": "08:00",
-        "frequencia": "8h"
+        "horario": "08:00"
     }
 ]

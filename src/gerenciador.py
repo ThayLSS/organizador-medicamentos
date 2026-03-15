@@ -1,6 +1,7 @@
 import json
 import os
 
+
 class Gerenciador:
     def __init__(self, arquivo="dados.json"):
         self.arquivo = arquivo
@@ -12,9 +13,8 @@ class Gerenciador:
                 return json.load(f)
         return []
 
-   
     def adicionar(self, medicamento):
-        self.lista.append(medicamento.to_dict())
+        self.lista.append(medicamento)
         self.salvar()
 
     def salvar(self):
@@ -24,6 +24,6 @@ class Gerenciador:
     def excluir(self, indice):
         if 0 <= indice < len(self.lista):
             removido = self.lista.pop(indice)
-            self.salvar() # Importante salvar após remover
+            self.salvar()  # Importante salvar após remover
             return removido
         return None

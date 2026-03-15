@@ -5,7 +5,7 @@ class Medicamento:
         self.frequencia = frequencia
 
     def to_dict(self):
-        
+
         return {
             "nome": self.nome,
             "horario": self.horario,
@@ -13,4 +13,5 @@ class Medicamento:
         }
 
     def __str__(self):
-        return f"{self.nome} | Horário: {self.horario} | Frequência: {self.frequencia}"
+        return (f"{self.nome} | Horário: {self.horario} | "
+                f"Frequência: {self.frequencia}")

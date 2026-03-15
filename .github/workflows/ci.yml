@@ -1,20 +1,26 @@
 name: Python CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          
       - name: Install dependencies
         run: |
-          pip install pytest pylint
-      - name: Run Pytest
-        run: python -m pytest
-      - name: Run Pylint
-        run: python -m pylint src/main.py
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          
+      - name: Lint com Flake8
+        run: flake8 src/
+        
+      - name: Test com Pytest
+        run: pytest teste/

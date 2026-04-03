@@ -1,0 +1,12 @@
+[
+    {
+        "nome": "dipirona",
+        "horario": "06:00",
+        "frequencia": "6h"
+    },
+    {
+        "nome": "nimesulida",
+        "horario": "13:30",
+        "frequencia": "12h"
+    }
+]

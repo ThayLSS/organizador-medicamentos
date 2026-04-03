@@ -1,51 +1,57 @@
-##Organizador de Medicamentos 💊
+**Organizador de Medicamentos**
+Este projeto é um sistema para gerenciamento e organização de medicamentos desenvolvido em Python. O foco principal é a robustez do código, garantida por testes automatizados.
 
-##Descrição do Problema:
-Idosos e pessoas com rotinas complexas frequentemente esquecem o horário correto de tomar seus medicamentos, o que pode causar sérios riscos à saúde. A falta de uma ferramenta simples para gerenciar esses horários agrava esse problema.
+**Como Acessar e Rodar o Projeto**
+Para avaliar a aplicação, você pode escolher entre as duas abordagens abaixo, conforme sua preferência de ambiente:
 
-##Proposta da Solução:
-O Organizador de Medicamentos é uma aplicação CLI que permite o cadastro, acompanhamento e busca de remédios, garantindo que o usuário tenha um controle claro de sua rotina de forma simples e acessível.
+**Clone o repositório:**
+git clone https://github.com/ThayLSS/organizador-medicamentos
 
-##Público-alvo:
-Idosos, cuidadores e qualquer pessoa que precise de auxílio para gerenciar sua rotina de medicamentos.
+**1. Via VS Code**
+Abordagem sugerida para uma análise detalhada da arquitetura, pastas e lógica.
 
-##Funcionalidades Principais
-1.Adicionar Medicamento: Cadastro de nome, horário e frequência.
+Abra o Visual Studio Code e vá em File > Open Folder.
 
-2.Listar Todos: Visualização rápida de todos os medicamentos cadastrados.
+Selecione a pasta organizador-medicamentos que foi clonada anteriormente.
 
-3.Excluir Medicamento: Remoção de registros por índice.
+Abra o Terminal Integrado do VS Code (Atalho: Ctrl + ' ou Ctrl + J).
 
-4.Buscar Medicamento: Busca rápida por nome para ver o horário de uma medicação específica.
+Certifique-se de que o terminal está apontando para a raiz do projeto e execute a aplicação:
+**python -m src.main**
 
-##Tecnologias Utilizadas:
-Linguagem: Python 3.11
+**2. Via Terminal**
+Ideal para verificar rapidamente se os testes e a aplicação estão operantes.
 
-##Ferramentas de Qualidade: Flake8 (Linting) e Pytest (Testes)
+Entre na pasta raiz do projeto:
+**cd organizador-medicamentos**
 
-##Integração: GitHub Actions (CI)
+Instale as dependências necessárias:
+**pip install -r requirements.txt**
 
-##Como Instalar e Executar:
-Clone o repositório: git clone https://github.com/ThayLSS/organizador-medicamentos
+Execute a suite de testes:
+**python -m pytest**
 
-##Instale as dependências: pip install -r requirements.txt
+Testes Automatizados
+O projeto utiliza o Pytest para garantir a integridade de todas as funções de gerenciamento.
 
-##Execute a aplicação:
-python -m src.main
+Comando para execução: **python -m pytest**
 
-##Como Rodar os Testes:
-Para garantir que tudo está funcionando como esperado, execute:
-pytest teste/
+Localização dos arquivos: Pasta /tests
 
-##Como Rodar o Lint:
-Para verificar a qualidade do código conforme as normas PEP 8:
-python -m flake8 src/
+Cobertura: Inclui testes de fluxo principal e validações de lógica.
 
-##Versão Atual
-1.0.0
+Qualidade de Código
+Para garantir um código limpo e padronizado conforme a PEP 8, o projeto utiliza o Flake8. Para rodar a verificação de linting:
+**python -m flake8 src/**
 
-##Autora:
-Thaynara Lima Soares Sousa
+Licença
+Este projeto está sob a licença MIT. Isso significa que você é livre para usar, copiar e modificar o software, desde que mantenha os créditos originais.
 
-##Link do Repositório
-https://github.com/ThayLSS/organizador-medicamentos
+Informações Gerais
+Versão Atual: 1.0.0
+
+**Autora: Thaynara Lima Soares Sousa**
+
+GitHub: https://github.com/ThayLSS
+
+Link Direto do Repositório: https://github.com/ThayLSS/organizador-medicamentos

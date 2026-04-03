@@ -1,6 +1,21 @@
 **Organizador de Medicamentos**
 Este projeto é um sistema para gerenciamento e organização de medicamentos desenvolvido em Python. O foco principal é a robustez do código, garantida por testes automatizados.
 
+**Descrição do Problema**: Idosos e pessoas com rotinas complexas frequentemente esquecem o horário correto de tomar seus medicamentos, o que pode causar sérios riscos à saúde. A falta de uma ferramenta simples para gerenciar esses horários agrava esse problema.
+
+**Proposta da Solução**: O Organizador de Medicamentos é uma aplicação CLI que permite o cadastro, acompanhamento e busca de remédios, garantindo que o usuário tenha um controle claro de sua rotina de forma simples e acessível.
+
+
+**Funcionalidades Principais** 
+1.Adicionar Medicamento: Cadastro de nome, horário e frequência.
+2.Listar Todos: Visualização rápida de todos os medicamentos cadastrados.
+3.Excluir Medicamento: Remoção de registros por índice.
+4.Buscar Medicamento: Busca rápida por nome para ver o horário de uma medicação específica.
+
+**Tecnologias Utilizadas**: Linguagem: Python 3.11
+**Ferramentas de Qualidade**: Flake8 (Linting) e Pytest (Testes)
+**Integração**: GitHub Actions (CI)
+
 **Como Acessar e Rodar o Projeto**
 Para avaliar a aplicação, você pode escolher entre as duas abordagens abaixo, conforme sua preferência de ambiente:
 

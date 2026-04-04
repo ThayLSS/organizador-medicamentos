@@ -72,11 +72,21 @@ GitHub: https://github.com/ThayLSS
 Link Direto do Repositório: https://github.com/ThayLSS/organizador-medicamentos
 
 **IMAGENS DO SISTEMA**
+
+
+**ADICIONAR MEDICAMENTO**
+
 ![ADICIONAR MEDICAMENTO](https://github.com/ThayLSS/organizador-medicamentos/blob/main/ADCMedicamento.png)
+
+**BUSCAR MEDICAMENTO**
 
 ![BUSCAR MEDICAMENTO](https://github.com/ThayLSS/organizador-medicamentos/blob/main/BuscarMedicamento.png)
 
+**LISTAR MEDICAMENTO**
+
 ![LISTAR MEDICAMENTO](https://github.com/ThayLSS/organizador-medicamentos/blob/main/ListarMedicamento.png)
+
+**REMOVER MEDICAMENTO**
 
 ![REMOVER MEDICAMENTO](https://github.com/ThayLSS/organizador-medicamentos/blob/main/RemoverMedicamento.png)
 

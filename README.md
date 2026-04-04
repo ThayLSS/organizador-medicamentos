@@ -70,3 +70,13 @@ Versão Atual: 1.0.0
 GitHub: https://github.com/ThayLSS
 
 Link Direto do Repositório: https://github.com/ThayLSS/organizador-medicamentos
+
+**IMAGENS DO SISTEMA**
+![ADICIONAR MEDICAMENTO](https://github.com/ThayLSS/organizador-medicamentos/blob/main/ADCMedicamento.png)
+
+![BUSCAR MEDICAMENTO](https://github.com/ThayLSS/organizador-medicamentos/blob/main/BuscarMedicamento.png)
+
+![LISTAR MEDICAMENTO](https://github.com/ThayLSS/organizador-medicamentos/blob/main/ListarMedicamento.png)
+
+![REMOVER MEDICAMENTO](https://github.com/ThayLSS/organizador-medicamentos/blob/main/RemoverMedicamento.png)
+

@@ -5,8 +5,13 @@
         "frequencia": "6h"
     },
     {
-        "nome": "nimesulida",
-        "horario": "13:30",
+        "nome": "Nimesulida",
+        "horario": "17:40",
         "frequencia": "12h"
+    },
+    {
+        "nome": "Omeprazol",
+        "horario": "09:00",
+        "frequencia": "6h"
     }
 ]

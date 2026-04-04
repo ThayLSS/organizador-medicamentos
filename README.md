@@ -22,6 +22,9 @@ Para avaliar a aplicação, você pode escolher entre as duas abordagens abaixo,
 **Clone o repositório:**
 git clone https://github.com/ThayLSS/organizador-medicamentos
 
+Instale as dependências necessárias:
+**pip install -r requirements.txt**
+
 **1. Via VS Code**
 Abordagem sugerida para uma análise detalhada da arquitetura, pastas e lógica.
 
@@ -39,9 +42,6 @@ Ideal para verificar rapidamente se os testes e a aplicação estão operantes.
 
 Entre na pasta raiz do projeto:
 **cd organizador-medicamentos**
-
-Instale as dependências necessárias:
-**pip install -r requirements.txt**
 
 Execute a suite de testes:
 **python -m pytest**

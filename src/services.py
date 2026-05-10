@@ -20,8 +20,8 @@ class IBGEService:
         # Limpa a sigla para evitar erros de espaços ou letras minúsculas
         uf = sigla_uf.strip().upper()
 
-        # URL CORRIGIDA: Aponta para os municípios de uma UF específica
-        url = f"https://servicodados.ibge.gov.br/api/v1/localidades/estados/{uf}/municipios"
+        base_url = "https://servicodados.ibge.gov.br/api/v1/localidades"
+        url = f"{base_url}/estados/{uf}/municipios"
 
         try:
             response = requests.get(url, timeout=10)

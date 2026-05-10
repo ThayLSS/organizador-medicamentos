@@ -1,5 +1,5 @@
 > **Status do Projeto:** Entrega Intermediária Concluída ✅
-> **Deploy (Página do Projeto):** [CLIQUE AQUI PARA ACESSAR](https://github.com/ThayLSS/organizador-medicamentos/settings/pages)
+> **Deploy (Página do Projeto):** [CLIQUE AQUI PARA ACESSAR](https://thaylss.github.io/organizador-medicamentos/)
 
 **Organizador de Medicamentos**
 Este projeto é um sistema para gerenciamento e organização de medicamentos desenvolvido em Python. O foco principal é a robustez do código, garantida por testes automatizados.

@@ -17,7 +17,8 @@ class IBGEService:
     @staticmethod
     def listar_cidades_por_estado(sigla_uf):
 
-        url = f"https://servicodados.ibge.gov.br/api/v1/localidades/estados/{sigla_uf}/municipios"
+       base_url = "https://servicodados.ibge.gov.br/api/v1"
+       url = f"{base_url}/localidades/estados?orderBy=nome"
         try:
             response = requests.get(url, timeout=5)
             response.raise_for_status()

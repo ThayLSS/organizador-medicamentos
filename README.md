@@ -104,7 +104,7 @@ Link Direto do Repositório: https://github.com/ThayLSS/organizador-medicamentos
 
 **CONSULTAR IBGE**
 
-![CONSULTAR](img_sistema\BuscarLocalidadesAPI_IBGE.png)
+![CONSULTAR](img_sistema/BuscarLocalidadesAPI_IBGE.png)
 
 
 

@@ -1,3 +1,6 @@
+> **Status do Projeto:** Entrega Intermediária Concluída ✅
+> **Deploy (Página do Projeto):** [CLIQUE AQUI PARA ACESSAR](https://github.com/ThayLSS/organizador-medicamentos/settings/pages)
+
 **Organizador de Medicamentos**
 Este projeto é um sistema para gerenciamento e organização de medicamentos desenvolvido em Python. O foco principal é a robustez do código, garantida por testes automatizados.
 
@@ -12,9 +15,17 @@ Este projeto é um sistema para gerenciamento e organização de medicamentos de
 3.Excluir Medicamento: Remoção de registros por índice.
 4.Buscar Medicamento: Busca rápida por nome para ver o horário de uma medicação específica.
 
+## 🚀 Novas Funcionalidades (Etapa Intermediária)
+Nesta etapa, o foco foi a profissionalização do fluxo de trabalho e integração externa:
+
+- **Integração com API do IBGE:** Implementada consulta dinâmica de Estados e Cidades para auxiliar na localização de pontos de retirada de medicamentos.
+- **Testes de Integração:** Suite de testes automatizados para garantir a comunicação correta com a API externa.
+- **Ambiente Virtual:** Estrutura de dependências organizada via `requirements.txt`.
+
 **Tecnologias Utilizadas**: Linguagem: Python 3.11
 **Ferramentas de Qualidade**: Flake8 (Linting) e Pytest (Testes)
 **Integração**: GitHub Actions (CI)
+**Requests** (Consumo de API REST)
 
 **Como Acessar e Rodar o Projeto**
 Para avaliar a aplicação, você pode escolher entre as duas abordagens abaixo, conforme sua preferência de ambiente:
@@ -89,3 +100,11 @@ Link Direto do Repositório: https://github.com/ThayLSS/organizador-medicamentos
 **REMOVER MEDICAMENTO**
 
 ![REMOVER](img_sistema/RemoverMedicamento.png)
+
+
+**CONSULTAR IBGE**
+
+![CONSULTAR](img_sistema\BuscarLocalidadesAPI_IBGE.png)
+
+
+

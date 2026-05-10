@@ -1,10 +1,35 @@
 import os
 from .medicamento import Medicamento
 from .gerenciador import Gerenciador
+from .services import IBGEService  # Importando o serviço da API
 
 
 def limpar_tela():
     os.system("cls" if os.name == "nt" else "clear")
+
+
+def consultar_ibge():
+    limpar_tela()
+    print("--- CONSULTAR LOCALIDADES (IBGE) ---")
+    print("Buscando estados...")
+    estados = IBGEService.listar_estados()
+
+    if not estados:
+        print("Erro ao conectar com a API.")
+        return
+
+    print(f"Estados: {', '.join(estados)}")
+    uf = input("\nDigite a UF para ver cidades (ex: SP): ").upper()
+
+    if uf in estados:
+        print(f"Buscando cidades de {uf}...")
+        cidades = IBGEService.listar_cidades_por_estado(uf)
+        print(f"\nCidades em {uf}:")
+        for cidade in cidades[:15]:  # Mostra as 15 primeiras
+            print(f"- {cidade}")
+        print(f"\nTotal de {len(cidades)} cidades encontradas.")
+    else:
+        print("UF inválida.")
 
 
 def main():
@@ -18,6 +43,7 @@ def main():
         print("3. Excluir Medicamento")
         print("4. Sair")
         print("5. Buscar Medicamento")
+        print("6. Consultar Localidades (API IBGE)")  # Nova opção
 
         opcao = input("\nEscolha uma opção: ")
 
@@ -68,11 +94,17 @@ def main():
             resultados = sistema.buscar(termo)
             if resultados:
                 for m in resultados:
-                    texto = f"Encontrado: {m.get('nome', 'Sem nome')} " \
-                            f"às {m.get('horario', '00:00')}"
+                    texto = (
+                        f"Encontrado: {m.get('nome', 'Sem nome')} "
+                        f"às {m.get('horario', '00:00')}"
+                    )
                     print(texto)
             else:
                 print("Nenhum medicamento encontrado.")
+            input("\nPressione Enter para voltar ao menu")
+
+        elif opcao == "6":
+            consultar_ibge()
             input("\nPressione Enter para voltar ao menu")
 
         elif opcao == "4":
